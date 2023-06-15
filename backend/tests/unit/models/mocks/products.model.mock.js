@@ -11,8 +11,13 @@ const products = [
       id: 3,
       name: 'Escudo do Capitão América',
     },
-  ]; 
+  ];
+
+  const newProduct = {
+    name: 'A inigualvel marreta do chapolin colorado',
+  };
   
   module.exports = {
     products,
+    newProduct,
   };

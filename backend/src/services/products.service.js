@@ -38,4 +38,16 @@ async function deleteProduct(productId) {
     await productsModel.deleteProduct(productId);
 }
 
-module.exports = { getAll, getProductById, insertProduct, updateProduct, deleteProduct };
+async function findByName(name) {
+    const result = await productsModel.findByName(name);
+    return result;
+}
+
+module.exports = {
+    getAll,
+    getProductById,
+    insertProduct,
+    updateProduct,
+    deleteProduct,
+    findByName,
+};
