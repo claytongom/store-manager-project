@@ -11,8 +11,8 @@ const products = [
       id: 3,
       name: 'Escudo do Capitão América',
     },
-  ];
-
+  ]; 
+  
   module.exports = {
     products,
   };
