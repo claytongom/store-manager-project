@@ -26,7 +26,7 @@ async function createSale(product) {
     const saleResult = await Promise.all(salePromises);
     const object = {
       id: saleId,
-      productsSold: saleResult,
+      itemsSold: saleResult,
     };
     
     return object;

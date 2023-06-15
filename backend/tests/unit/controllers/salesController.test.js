@@ -7,7 +7,7 @@ chai.use(sinonChai);
 
 const { salesService } = require('../../../src/services');
 const { salesController } = require('../../../src/controllers');
-const { sales, productsSold, newSale } = require('./mocks/sales.controller.mock');
+const { sales, itemsSold, newSale } = require('./mocks/sales.controller.mock');
 
 describe('testando SalesController', function () {
     afterEach(function () {
@@ -74,7 +74,7 @@ describe('testando SalesController', function () {
         it('testando status 200 e resutlado da busca', async function () {
             const res = {};
             const req = {
-                body: productsSold,
+                body: itemsSold,
             };
 
             res.status = sinon.stub().returns(res);

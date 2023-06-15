@@ -21,7 +21,7 @@ const sales = [
 
   const newSale = {
     id: 1,
-    productsSold: [
+    itemsSold: [
       {
         productId: 1,
         quantity: 1,
@@ -29,7 +29,7 @@ const sales = [
     ],
   };
   
-  const productsSold = [
+  const itemsSold = [
     {
       productId: 1,
       quantity: 1,
@@ -39,5 +39,5 @@ const sales = [
   module.exports = {
     sales,
     newSale,
-    productsSold,    
+    itemsSold,    
   };

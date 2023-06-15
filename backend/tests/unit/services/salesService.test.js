@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const { salesService } = require('../../../src/services');
 const { salesModel } = require('../../../src/models');
 
-const { sales, newSale, productsSold, errorProduct } = require('./mocks/sales.service.mock');
+const { sales, newSale, itemsSold, errorProduct } = require('./mocks/sales.service.mock');
 
 describe('testando salesService', function () {
   afterEach(function () {
@@ -58,9 +58,9 @@ describe('testando salesService', function () {
 
     it('testando status 200 e retorno', async function () {
       const stub1 = sinon.stub(salesModel, 'createSaleId').resolves(1);
-      const stub2 = sinon.stub(salesModel, 'createSale').resolves(productsSold[0]);
+      const stub2 = sinon.stub(salesModel, 'createSale').resolves(itemsSold[0]);
 
-      const result = await salesService.createSale(productsSold);
+      const result = await salesService.createSale(itemsSold);
 
       expect(result).to.deep.equal(newSale);
 
